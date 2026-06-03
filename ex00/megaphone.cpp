@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cctype>
 
-int	main(int ac, char **av)
+int main(int ac, char **av)
 {
 	if (ac == 1)
 	{
@@ -16,10 +16,12 @@ int	main(int ac, char **av)
 				// 使用<cctype>中的 std::toupper 将字符转为大写
 				std::cout << static_cast<char>(std::toupper(av[i][j]));
 			}
+			// 每个arg之间的空格
+			if (i < ac - 1)
+				std::cout << " ";
 		}
 	}
 	// 无论如何，最后都必须以换行符结尾
 	std::cout << std::endl;
 	return 0;
 }
-

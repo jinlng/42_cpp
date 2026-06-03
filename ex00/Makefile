@@ -1,7 +1,7 @@
 NAME		= megaphone
 
 # compile set up
-CXX		= c++
+CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
 
 SRCS		= megaphone.cpp
