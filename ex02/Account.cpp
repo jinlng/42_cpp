@@ -13,11 +13,15 @@ int Account::_totalNbWithdrawals = 0;
 
 void Account::_displayTimestamp()
 {
+    // 1. Get the current raw calendar time (Epoch time in seconds)
     std::time_t t = std::time(NULL);
+
+    // 2. Convert raw seconds into local time structures (Year, Month, Day, etc.)
     std::tm* now = std::localtime(&t);
 
     std::cout << "["
               << (now->tm_year + 1900)
+              // if less than 10, add a "0" then print the number
               << (now->tm_mon + 1 < 10 ? "0" : "") << (now->tm_mon + 1)
               << (now->tm_mday < 10 ? "0" : "") << now->tm_mday
               << "_"
