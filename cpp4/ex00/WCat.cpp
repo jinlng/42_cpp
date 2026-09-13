@@ -2,18 +2,18 @@
 
 WCat::WCat()
 {
-    std::cout << "WCat default constructor called" << std::endl;
+    std::cout << "🦁 Wrong Cat default constructor called" << std::endl;
     _type = "WCat";
 }
 
 WCat::WCat(const WCat &other) : WAnimal(other)
 {
-    std::cout << "Cat copy constructor called" << std::endl;
+    std::cout << "🦁 Wrong Cat copy constructor called" << std::endl;
 }
 
 WCat &WCat::operator=(const WCat &other)
 {
-    std::cout << "WCat copy assignment operator called" << std::endl;
+    std::cout << "🦁 Wrong Cat copy assignment operator called" << std::endl;
     if (this != &other)
         WAnimal::operator=(other);
     return (*this);
@@ -21,10 +21,10 @@ WCat &WCat::operator=(const WCat &other)
 
 WCat::~WCat()
 {
-    std::cout << "WCat destructor called" << std::endl;
+    std::cout << "🦁 Wrong Cat destructor called 🦦" << std::endl;
 }
 
 void WCat::makeSound() const
 {
-    std::cout << "Meow Meow!" << std::endl;
+    std::cout << "Meow Meow! 🐆" << std::endl;
 }

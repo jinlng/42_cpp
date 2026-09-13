@@ -2,18 +2,18 @@
 
 
 WAnimal::WAnimal() : _type("WAnimal") {
-    std::cout << "WAnimal default constructed. 🚧 " << std::endl;
+    std::cout << "🪼  Wrong Animal default constructed. 🚧 " << std::endl;
 }
 
 // 2. 拷贝构造函数 Copy Constructor
 WAnimal::WAnimal(const WAnimal &other) {
-    std::cout << "WAnimal copy constructor called. " << std::endl;
+    std::cout << "🪼  Wrong Animal copy constructor called. " << std::endl;
     *this = other;
 }
 
 WAnimal &WAnimal::operator=(const WAnimal &other)
 {
-    std::cout << "WAnimal copy assignment operator called" << std::endl;
+    std::cout << "🪼  Wrong Animal copy assignment operator called" << std::endl;
     if (this != &other)
         _type = other._type;
     return (*this);
@@ -21,7 +21,7 @@ WAnimal &WAnimal::operator=(const WAnimal &other)
 
 WAnimal::~WAnimal()
 {
-    std::cout << "WAnimal destructor called" << std::endl;
+    std::cout << "🪼  Wrong Animal destructor called" << std::endl;
 }
 
 const std::string &WAnimal::getType() const
@@ -31,5 +31,5 @@ const std::string &WAnimal::getType() const
 
 void WAnimal::makeSound() const
 {
-    std::cout << "* WAnimal sound *" << std::endl;
+    std::cout << "* (Wrong Animal sound) *" << std::endl;
 }

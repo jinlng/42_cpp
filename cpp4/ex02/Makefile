@@ -1,9 +1,9 @@
-NAME		=	Polymorphism
+NAME		=	Abstract
 
 CXX			=	c++
 CXXFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-SRCS		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WAnimal.cpp WDog.cpp WCat.cpp
+SRCS		=	main.cpp AAnimal.cpp Cat.cpp Dog.cpp Brain.cpp
 OBJS		=	$(SRCS:.cpp=.o)
 
 all: $(NAME)
