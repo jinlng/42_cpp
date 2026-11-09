@@ -11,3 +11,11 @@
 ## c++ 4: Subtype Polymorphism, Abstract Classes, and Interfaces
 
 ## c++ 5: Repetition and Exceptions
+
+## c++ 6: casts
+
+## c++ 7:
+
+## c++ 8:
+
+## c++ 9:
