@@ -103,3 +103,18 @@ Module 05 shifts away from traditional error codes (like returning `-1` or `NULL
   }
 
 * **Stack Unwinding**: When an exception is thrown, local objects in the call stack are automatically destroyed in reverse order of construction, ensuring zero resource leaks before the execution flow reaches the matching `catch` block.
+
+  
+* **struct FormMapping (in Intern)**: 
+在 `Intern` 类的高级实现中，`struct FormMapping` 里的 `(*creator)` 是一个函数指针（**Function Pointer**）: 把某个函数的“内存地址”存起来，以便在运行时根据输入的字符串，动态去调用对应的表单创建函数。
+  ``` c++
+  struct FormMapping {
+      std::string name;                             // 表单名字（如 "robotomy request"）
+      AForm* (*creator)(const std::string& target); // 🌟 关键：函数指针
+  };
+  ```
+  * `AForm*`：这个函数指针指向的函数，返回值是一个指向 `AForm` 的指针。
+
+  *  `(*creator)`：这是函数指针变量的名字（名字叫 `creator`，你可以叫它任何名字）。
+
+  *  `const std::string& target`：这个函数指针指向的函数，接收一个参数：目标的字符串引用。
